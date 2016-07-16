@@ -52,7 +52,8 @@ var Articles = mongoose.model('Articles', articlesSchema);
 
 var app = express();
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', 8080);
+app.listen(app.get('port'));
 
 /* GET home page. */
 app.get('/comics', function (req, res, next) {
